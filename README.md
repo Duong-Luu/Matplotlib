@@ -1,75 +1,35 @@
-# Matplotlib Homework - The Power of Plots
+## The Power of Plots
 
-## Background
+Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, specializes in anti-cancer pharmaceuticals. In its most recent efforts, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
 
-What good is data without a good plot to tell the story?
 
-So, let's take what you've learned about Python Matplotlib and apply it to a real-world situation and dataset:
+We have access to the complete data from their most recent animal study. In this study, 250 mice identified with SCC tumor growth were treated through a variety of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals' drug of interest, Capomulin, versus the other treatment regimens.
 
-![Laboratory](Images/Laboratory.jpg)
 
-While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you've joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego. Pymaceuticals specializes in anti-cancer pharmaceuticals. In its most recent efforts, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+Given the task by the executive team to generate all of the tables and figures needed for the technical report of the study and for a top-level summary of the study results.
 
-As a senior data analyst at the company, you've been given access to the complete data from their most recent animal study. In this study, 250 mice identified with SCC tumor growth were treated through a variety of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals' drug of interest, Capomulin, versus the other treatment regimens. You have been tasked by the executive team to generate all of the tables and figures needed for the technical report of the study. The executive team also has asked for a top-level summary of the study results.
 
-## Instructions
+**The final report will include the following below:**
+- A summary statistics table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen
 
-Your tasks are to do the following:
+- Bar plots that show the number of data points for each treatment regimen using Pandas's DataFrame.plot() and Matplotlib's pyplot
 
-* Generate a summary statistics table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen.
+- A box plot of the final tumor volume for the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin; and highlighting any potential outliers in the plot. Additionally, display the calculation of the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
 
-* Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the number of data points for each treatment regimen.
+- A line plot of time point versus tumor volume for a single mouse treated with Capomulin
 
-  * **NOTE:** These plots should look identical.
+- A scatter plot of mouse weight versus average tumor volume for the Capomulin treatment regimen. Additionally, show the calculation of the correlation coefficient and linear regression model and plot this linear regression model on top of the scatter plot.
 
-* Generate a pie plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the distribution of female or male mice in the study.
 
-  * **NOTE:** These plots should look identical.
+**Observations and Insights:** 
+250 mice identified with squamous cell carcinoma (SCC) tumor growth were treated through a variety of drug regimens. Over the course of 45 days, tumor development was observed and measured.
+- Of the drug regimens used, Capomulin and Ramicane were the treatments seen in mice with the lowest average tumor volume whereas Ketapril and Naftisol regimens had the highest average of tumor volume.
 
-* Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Calculate the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
+- The distribution of data of the four treatment regmines of Capomulin, Ramicane, Infubinol, and Ceftamin show that Ramicane had the lowest tumor volume data distribution compared to Capomulin, whereas Infubinol had the highest tumor volume data distribution. It should be noted that there was an outlier in the Infubinol treatment where tumor volume was low for one subject.
 
-* Using Matplotlib, generate a box and whisker plot of the final tumor volume for all four treatment regimens and highlight any potential outliers in the plot by changing their color and style.
+- The correlation coefficient between both mouse weight and tumor volume is 0.84 indicating that the strength of this correlation is strong. This would mean that mouse weight has an influence on tumor volume.
 
-  **Hint**: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/gallery/pyplots/boxplot_demo_pyplot.html#sphx-glr-gallery-pyplots-boxplot-demo-pyplot-py) for help with changing the style of the outliers.
+- Treatment Regimens Capomulin and Ramicane had more opportunities to be used compared to Propovia, this may mean that Capomulin and Ramicane subjects lived longer than Propovia subjects.
 
-* Generate a line plot of time point versus tumor volume for a single mouse treated with Capomulin.
+Overall, Ramicane is the treatment regimen comparable to Capomulin in reducing the tumor volume of squamous cell carcinoma (SCC) in mice.
 
-* Generate a scatter plot of mouse weight versus average tumor volume for the Capomulin treatment regimen.
-
-* Calculate the correlation coefficient and linear regression model between mouse weight and average tumor volume for the Capomulin treatment. Plot the linear regression model on top of the previous scatter plot.
-
-* Look across all previously generated figures and tables and write at least three observations or inferences that can be made from the data. Include these observations at the top of notebook.
-
-Here are some final considerations:
-
-* You must use proper labeling of your plots, to include properties such as: plot titles, axis labels, legend labels, _x_-axis and _y_-axis limits, etc.
-
-* See the [starter workbook](Pymaceuticals/pymaceuticals_starter.ipynb) for help on what modules to import and expected format of the notebook.
-
-## Hints and Considerations
-
-* Be warned: These are very challenging tasks. Be patient with yourself as you trudge through these problems. They will take time and there is no shame in fumbling along the way. Data visualization is equal parts exploration, equal parts resolution.
-
-* You have been provided a starter notebook. Use the code comments as a reminder of steps to follow as you complete the assignment.
-
-* Don't get bogged down in small details. Always focus on the big picture. If you can't figure out how to get a label to show up correctly, come back to it. Focus on getting the core skeleton of your notebook complete. You can always revisit old problems.
-
-* While you are trying to complete this assignment, feel encouraged to constantly refer to Stack Overflow and the Pandas documentation. These are needed tools in every data analyst's tool belt.
-
-* Remember, there are many ways to approach a data problem. The key is to break up your task into micro tasks. Try answering questions like:
-
-  * How does my DataFrame need to be structured for me to have the right _x_-axis and _y_-axis?
-
-  * How do I build a basic scatter plot?
-
-  * How do I add a label to that scatter plot?
-
-  * Where would the labels for that scatter plot come from?
-
-  Again, don't let the magnitude of a programming task scare you off. Ultimately, every programming problem boils down to a handful of bite-sized tasks.
-
-* Get help when you need it! There is never any shame in asking. But, as always, ask a _specific_ question. You'll never get a great answer to "I'm lost."
-
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
